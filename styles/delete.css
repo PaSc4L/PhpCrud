@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-
+/* ---Main parts--- */
 body {
   color: #444;
   font-family: sans-serif;
@@ -13,6 +13,7 @@ body {
   margin: 0 auto;
 }
 
+/* ---Exit link and output messege--- */
 h1 {
   text-align: center;
 }
