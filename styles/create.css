@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+/* ---Main parts--- */
 body {
   color: #444;
   font-family: sans-serif;
@@ -14,6 +15,7 @@ body {
   border-radius: 10px;
 }
 
+/* ---Headers--- */
 h2 {
   text-align: center;
 }
@@ -21,6 +23,7 @@ h3 {
   text-align: center;
 }
 
+/* ---Input fields--- */
 label {
   font-weight: bold;
 }
@@ -36,6 +39,8 @@ input {
   padding: 10px;
   width: 50%;
 }
+
+/* ---Button styles--- */
 .button-holder {
   text-align: center;
 }
