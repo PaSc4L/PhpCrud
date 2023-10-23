@@ -16,52 +16,56 @@
   <title>Employees</title>
 </head>
 <body>
-  <table>
-    <div class = "container">
-    <thead>
-      <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>position</th>
-        <th>email</th>
-        <th>mobile</th>
-        <th>
-          <a href = "add_user.php"><i class="fa-solid fa-plus add"></i></a>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-    <?php
-          if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-        ?>
-        <tr>  
-          <td><?php echo $row['id']?></td>
-          <td><?php echo $row['name']?></td>
-          <td><?php echo $row['position']?></td>
-          <td><?php echo $row['email']?></td>
-          <td><?php echo $row['mobile']?></td>
-          <td>
-            <a href = "#">
-              <i class="fa-solid fa-pen-to-square edit"></i>
-            </a> 
-            <a href = "delete_user.php?id=<?php echo $row['id']; ?>">
-              <i class="fa-solid fa-trash delete"></i>
-            </a>
-          </td>
-        </tr>
-        <?php       
-            }
-          }
-          else{
-        ?>
+  <div class = "container">
+    <table>
+      <thead>
         <tr>
-          <td colspan="6"><?php echo "No data to showcase"?></td>
+          <th>id</th>
+          <th>name</th>
+          <th>position</th>
+          <th>email</th>
+          <th>mobile</th>
+          <th>
+            <a href = "create.php"><i class="fa-solid fa-plus add"></i></a>
+          </th>
         </tr>
-        <?php
-          }
-        ?>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+      <?php
+            //going trough each record
+            if ($result->num_rows > 0) {
+              //writing out each record as a table row
+              while ($row = $result->fetch_assoc()) {
+          ?>
+          <tr>  
+            <td><?php echo $row['id']?></td>
+            <td><?php echo $row['name']?></td>
+            <td><?php echo $row['position']?></td>
+            <td><?php echo $row['email']?></td>
+            <td><?php echo $row['mobile']?></td>
+            <td>
+              <!-- adding id when clicking on the current row -->
+              <a href = "update.php?id=<?php echo $row['id']; ?>">
+                <i class="fa-solid fa-pen-to-square edit"></i>
+              </a> 
+              <a href = "delete.php?id=<?php echo $row['id']; ?>">
+                <i class="fa-solid fa-trash delete"></i>
+              </a>
+            </td>
+          </tr>
+          <?php       
+              }
+            }else{
+              //if there is no data to output, write it out
+          ?>
+          <tr>
+            <td colspan="6"><?php echo "No data to showcase"?></td>
+          </tr>
+          <?php
+            }
+          ?>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>

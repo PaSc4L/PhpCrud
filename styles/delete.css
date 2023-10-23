@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: #fff;
+}
+
+a:link {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0px;
+  background-color: red;
+  font-weight: bold;
+}
