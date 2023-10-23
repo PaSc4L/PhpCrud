@@ -1,3 +1,7 @@
+<?php
+  include "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,6 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>hi</h1>
+  
 </body>
 </html>
